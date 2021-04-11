@@ -1,8 +1,10 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import Login from './Components/Login'
 import { getTokenFromUrl } from './Components/Spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
+
+import Login from './Components/Login';
+import Player from './Components/Player';
 
 const spotify = new SpotifyWebApi();
 
@@ -21,7 +23,7 @@ const App = () => {
 
       spotify.getMe().then(user => {
         console.log('🧑: ', user);
-      })
+      });
     };
 
     console.log('TOKEN 👉: ', _token);
@@ -30,7 +32,7 @@ const App = () => {
   return (
     <div className="App">
 
-      { token ? ( <h1>LOGGED-IN</h1> ): ( <Login /> ) }
+      { token ? ( <Player /> ): ( <Login /> ) }
 
     </div>
   );
