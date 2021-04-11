@@ -24,7 +24,6 @@ const App = () => {
 
       { token ? ( <h1>LOGGED-IN</h1> ): ( <Login /> ) }
 
-      {/* <Login /> */}
     </div>
   );
 }
