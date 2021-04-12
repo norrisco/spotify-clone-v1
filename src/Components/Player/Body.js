@@ -3,7 +3,7 @@ import '../../CSS/Body.css';
 const Body = () => {
     return (
         <div className='bodyContainer'>
-            <h1>Body</h1>
+            <h1>[Body]</h1>
         </div>
     )
 }

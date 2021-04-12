@@ -1,9 +1,10 @@
 import '../../CSS/Player.css';
 import SideBar from './Sidebar';
 import Body from './Body';
+import Footer from './Footer';
 
 
-const Player = () => {
+const Player = ({ spotify }) => {
     return (
         <div className='playerContainer'>
             
@@ -12,7 +13,7 @@ const Player = () => {
                 <Body />
             </div>
             
-            {/* Footer/PlayerControls */}
+            <Footer />
             
         </div>
     )
