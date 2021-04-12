@@ -4,13 +4,12 @@ import { getTokenFromUrl } from './Components/Spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 
 import Login from './Components/Login';
-import Player from './Components/Player';
+import Player from './Components/Player/Player';
 import { StateProvider, useStateValue } from './StateProvider';
 
 const spotify = new SpotifyWebApi();
 
 const App = () => {
-  // const [token, setToken] = useState(null);
   const [{user, token}, dispatch] = useStateValue();
 
   // Run code based on a given condition
@@ -26,8 +25,6 @@ const App = () => {
         token: _token,
       });
 
-      // setToken(_token)
-
       spotify.setAccessToken(_token);
 
       spotify.getMe().then(user => {
@@ -40,18 +37,13 @@ const App = () => {
 
       });
     };
-
-    console.log('TOKEN👉: ', _token);
     
   }, []);
-
-  console.log('User🧑: ', user);
-  console.log('TOKEN👽: ', token);
 
   return (
     <div className="App">
 
-      { token ? ( <Player /> ): ( <Login /> ) }
+      { token ? ( <Player spotify={spotify} /> ): ( <Login /> ) }
 
     </div>
   );
