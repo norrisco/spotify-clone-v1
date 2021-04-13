@@ -1,0 +1,28 @@
+.playlistHeaderContainer {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 10px 10px 10px;
+}
+
+.playlistHeaderContainer > img {
+    object-fit: contain; /* Maintains aspect ratio */
+    height: 192px;
+    margin: 0 20px 0 0px;
+}
+
+.playlistInfo {
+    flex: 1;
+}
+
+.playlistInfo > strong {
+    font-size: 12px;
+}
+
+.playlistInfo > h2 {
+    font-size: 48px;
+    margin-bottom: 6px;
+}
+
+.playlistInfo > p {
+    font-size: 12px;
+}
