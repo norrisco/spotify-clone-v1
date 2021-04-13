@@ -26,14 +26,20 @@ const App = () => {
 
       spotify.setAccessToken(_token);
 
-      spotify.getMe().then(user => {
+      spotify.getMe().then((user) => {
         // Pops info into StateProvider
         dispatch({
           type: 'SET_USER',
-          user: user
+          user: user,
         });
       });
 
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists,
+        });
+      });
 
     };
   }, []);

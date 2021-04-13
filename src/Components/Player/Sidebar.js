@@ -1,13 +1,14 @@
 import '../../CSS/Sidebar.css';
 import SidebarOption from './SidebarOption';
-
-// import {HomeIcon, SearchIcon, LibraryMusicIcon } from '@material-ui/core';
+import { StateProvider, useStateValue } from '../../StateProvider';
 
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 
 const Sidebar = () => {
+    const[{ playlists }] = useStateValue();
+
     return (
         <div className='sidebarContainer'>
             <img className='sidebar_logo' src={`${process.env.PUBLIC_URL}/assets/spotify_logo_white.png`} alt='Spotify Logo' />
@@ -19,7 +20,11 @@ const Sidebar = () => {
             <br />
             <hr />
 
-            <SidebarOption title='Hiphop' />
+            {playlists?.items?.map((playlist) => (
+                <SidebarOption title={playlist.name} />
+            ))}
+
+            
             <SidebarOption title='Rock' />
             <SidebarOption title='RnB' />
 
