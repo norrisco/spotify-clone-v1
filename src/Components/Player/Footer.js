@@ -1,7 +1,7 @@
 import '../../CSS/Footer.css';
 import { Grid, Slider } from '@material-ui/core';
 
-import { PlayCircleOutline, SkipPrevious, SkipNext, Shuffle, Repeat, PlaylistPlay, VolumeDown } from '@material-ui/icons';
+import { PlayCircleFilled, SkipPrevious, SkipNext, Shuffle, Repeat, PlaylistPlay, VolumeDown } from '@material-ui/icons';
 
 const Footer = () => {
     return (
@@ -19,11 +19,11 @@ const Footer = () => {
             </div>
 
             <div className='footerCenter'>
-                <Shuffle className='footer_green'/>
-                <SkipPrevious className='footer_green'/>
-                <PlayCircleOutline fontSize='large' className='footer_green'/>
-                <SkipNext className='footer_green'/>
-                <Repeat className='footer_green'/>
+                <Shuffle className='shuffle'/>
+                <SkipPrevious className='skipPrevious'/>
+                <PlayCircleFilled fontSize='large' className='playButton'/>
+                <SkipNext className='skipNext'/>
+                <Repeat className='repeat'/>
             </div>
 
             <div className='footerRight'>

@@ -12,6 +12,7 @@
     border-top: 0.3px solid rgb(75, 75, 75);
 }
 
+/********** LEFT **********/
 .footerLeft {
     min-width: 150px;
     max-width: 200px;
@@ -19,28 +20,6 @@
     display: flex;
     align-items: center;
     /* justify-content: center; */
-}
-
-.footerCenter {
-    min-width: 100px;
-    max-width: 275px;
-    flex: 0.4;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1%;
-    margin: 0 1%;
-
-}
-
-.footerRight {
-    min-width: 100px;
-    max-width: 300px;
-    flex: 0.3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 4%;
 }
 
 .albumCover {
@@ -57,3 +36,52 @@
 .songInfo > p{
     font-size: 12px;
 }
+
+/********** CENTER **********/
+.footerCenter {
+    min-width: 100px;
+    max-width: 275px;
+    flex: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    margin: 0 1%;
+}
+
+.playButton {
+    font-size: 44px !important;
+}
+
+.playButton:hover {
+    transition: transform 125ms ease-out;
+    transform: scale(1.07) !important;
+}
+
+.skipPrevious, .skipNext {
+    filter: opacity(70%) !important;
+}
+
+.shuffle, .repeat {
+    color: #1ed15e;
+    filter: opacity(70%) !important;
+}
+
+.skipPrevious:hover, .skipNext:hover, .shuffle:hover, .repeat:hover {
+    transition: all 100ms ease-out;
+    filter: opacity(100%) !important;
+}
+
+
+
+/********** RIGHT **********/
+.footerRight {
+    min-width: 100px;
+    max-width: 300px;
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4%;
+}
+
