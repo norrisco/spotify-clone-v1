@@ -1,5 +1,16 @@
 .sidebarContainer {
     flex: 0.2;
     height: 100vh;
+    min-width: 210px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
     background-color: black;
+}
+
+.sidebarLogo {
+    object-fit: contain; /* Maintains aspect ratio */
+    height: 40px;
+    padding: 25px 10px 10px 15px;
+    margin-right: auto;
 }

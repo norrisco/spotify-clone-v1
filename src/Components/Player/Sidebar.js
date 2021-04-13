@@ -3,7 +3,7 @@ import '../../CSS/Sidebar.css';
 const SideBar = () => {
     return (
         <div className='sidebarContainer'>
-            <h1>[SideBar]</h1>
+            <img className='sidebarLogo' src={`${process.env.PUBLIC_URL}/assets/spotify_logo_white.png`} alt='Spotify Logo' />
         </div>
     )
 }
