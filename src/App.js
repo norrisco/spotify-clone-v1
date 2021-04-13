@@ -18,8 +18,7 @@ const App = () => {
     const _token = hash.access_token;
     window.location.hash = '';
 
-    if (_token) {  
-
+    if (_token) {
       dispatch({
         type: 'SET_TOKEN',
         token: _token,
@@ -28,16 +27,15 @@ const App = () => {
       spotify.setAccessToken(_token);
 
       spotify.getMe().then(user => {
-
         // Pops info into StateProvider
         dispatch({
           type: 'SET_USER',
           user: user
         });
-
       });
+
+
     };
-    
   }, []);
 
   return (

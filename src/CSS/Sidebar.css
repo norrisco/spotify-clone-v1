@@ -8,9 +8,17 @@
     background-color: black;
 }
 
-.sidebarLogo {
+.sidebar_logo {
     object-fit: contain; /* Maintains aspect ratio */
     height: 40px;
     padding: 25px 10px 10px 15px;
     margin-right: auto;
+}
+
+.sidebarContainer > hr {
+    height: 0.1px;
+    background-color: #282828;
+    border: none;
+    width: 90%;
+    margin: 10px auto;
 }
