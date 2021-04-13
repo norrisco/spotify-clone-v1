@@ -13,7 +13,8 @@
 }
 
 .footerLeft {
-    max-width: 30%;
+    min-width: 100px;
+    max-width: 200px;
     flex: 0.3;
     display: flex;
     align-items: center;
@@ -21,28 +22,30 @@
 }
 
 .footerCenter {
-    max-width: 300px;
+    min-width: 100px;
+    max-width: 250px;
     flex: 0.4;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 100px;
+    padding: 0 1%;
 
 }
 
 .footerRight {
     min-width: 100px;
-    max-width: 30%;
+    max-width: 300px;
     flex: 0.3;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 4%;
+    /* padding-right: 4%; */
 }
 
 .albumCover {
     object-fit: contain;
     height: 100%;
     padding: 10px;
-    /* margin: auto; */
+    margin-right: 2%;
 }
