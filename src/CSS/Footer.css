@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     bottom: 0px;
-    height: 90px;
+    height: 70px;
     width: 100%;
     color: white;
     background-color: #282828;
@@ -13,35 +13,36 @@
 }
 
 .footerLeft {
+    max-width: 30%;
     flex: 0.3;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .footerCenter {
+    max-width: 300px;
     flex: 0.4;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 200px;
-
     padding: 0 100px;
 
 }
 
 .footerRight {
+    min-width: 100px;
+    max-width: 30%;
     flex: 0.3;
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-right: 4%;
 }
 
 .albumCover {
     object-fit: contain;
-    height: 80px;
+    height: 100%;
     padding: 10px;
-    margin: auto;
+    /* margin: auto; */
 }
