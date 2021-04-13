@@ -37,6 +37,7 @@
     font-size: 12px;
 }
 
+
 /********** CENTER **********/
 .footerCenter {
     min-width: 100px;
@@ -73,7 +74,6 @@
 }
 
 
-
 /********** RIGHT **********/
 .footerRight {
     min-width: 100px;
@@ -84,4 +84,13 @@
     justify-content: center;
     margin-right: 4%;
 }
+
+.footerRight * .MuiSlider-root {
+    color: lightgrey;
+}
+
+.footerRight * .MuiSlider-root:hover {
+    color: #1ed15e;
+}
+
 
