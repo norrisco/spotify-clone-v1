@@ -3,10 +3,10 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    // token: null,
+    token: null,
 
     //TEMPORARY TOKEN for debugging - TO REMOVE AFTER DEVELOPMENT
-    token: 'BQBZvqbB5UvJL_6PjNBsJWa532vhwIRhYa7LAp1dKX4HZtg617mz0Yu7C38mcdthXgMPFSFwzg07eEY1r6DTbcGAyENXswAhjDzgdGRraEDzya-hH31Its38ZhxeadcW98kMuyCL3E_AaHfhTKkVVjfMqBRzaQ',
+    // token: 'BQBZvqbB5UvJL_6PjNBsJWa532vhwIRhYa7LAp1dKX4HZtg617mz0Yu7C38mcdthXgMPFSFwzg07eEY1r6DTbcGAyENXswAhjDzgdGRraEDzya-hH31Its38ZhxeadcW98kMuyCL3E_AaHfhTKkVVjfMqBRzaQ',
 
 };
 

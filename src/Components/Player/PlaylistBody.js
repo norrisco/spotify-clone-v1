@@ -2,8 +2,12 @@ import { Favorite, MoreHoriz, PlayCircleFilledTwoTone } from '@material-ui/icons
 import '../../CSS/PlaylistBody.css';
 import Header from './Header';
 import PlaylistHeader from './PlaylistHeader';
+import SongList from './SongList';
+import { useStateValue } from '../../StateProvider';
 
 const PlaylistBody = ({ spotify }) => {
+    const [{ discover_weekly }, dispatch ] = useStateValue();
+
     return (
         <div className='bodyContainer'>
             <Header spotify={spotify} />
@@ -15,11 +19,15 @@ const PlaylistBody = ({ spotify }) => {
                 <PlayCircleFilledTwoTone className='playlistPlayIcon' />
                 <Favorite className='playlistHeartIcon' />
                 <MoreHoriz className='playlistMoreIcon' />
-            </div>
+                </div>
+
+                {/* List of Songs */}
+                {discover_weekly?.tracks.items.map(item => (
+                    <SongList track={item.track} />
+                ))}
             </div>
 
             
-            {/* List of songs */}
         </div>
     )
 }
