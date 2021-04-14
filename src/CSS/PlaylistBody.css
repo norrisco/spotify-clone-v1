@@ -3,8 +3,13 @@
     height: 100vh;
     padding: 30px;
     color: white;
+    overflow-y: auto;
     /* background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1)); */
     background: linear-gradient(rgb(237, 143, 182), rgba(0,0,0,.5));
+}
+
+.bodyContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .playlistControlIcons {
