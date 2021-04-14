@@ -55,7 +55,7 @@
 }
 
 .playButton:hover {
-    transition: transform 125ms ease-out;
+    transition: transform 100ms;
     transform: scale(1.07) !important;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .skipPrevious:hover, .skipNext:hover, .shuffle:hover, .repeat:hover {
-    transition: all 100ms ease-out;
+    transition: all 100ms;
     filter: opacity(100%) !important;
 }
 

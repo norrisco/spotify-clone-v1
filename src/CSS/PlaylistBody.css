@@ -1,0 +1,54 @@
+.bodyContainer {
+    flex: 0.8;
+    height: 100vh;
+    padding: 30px;
+    color: white;
+    /* background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1)); */
+    background: linear-gradient(rgb(237, 143, 182), rgba(0,0,0,.5));
+}
+
+.playlistControlIcons {
+    display: flex;
+    align-items: center;
+}
+
+.playlistControlIcons > .MuiSvgIcon-root {
+    margin-right: 25px;
+}
+
+/* .playlistPlayIconBG {
+    background-color: white;
+    clip-path: circle(28% at 53% 49%);
+    padding: 2px 2px 1px 1px;
+} */
+
+.playlistPlayIcon {
+    font-size: 68px !important;
+    /* color: #1ed15e; */
+    /* background-color: rgb(255,255,255); */
+    /* background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(30,209,94,1) 29%); */
+    /* border-radius: 100px; */
+    margin: 20px 0 20px 5px;
+    padding: 0px;
+}
+
+.playlistPlayIcon:hover {
+    transition: transform 100ms;
+    transform: scale(1.07) !important;
+    /* transition: color 200ms; */
+    /* color: #22fa6e; */
+}
+
+.playlistHeartIcon {
+    font-size: 32px !important;
+}
+
+.playlistMoreIcon {
+    font-size: 32px !important;
+    filter: opacity(70%) !important;
+}
+
+.playlistMoreIcon:hover {
+    transition: all 100ms;
+    filter: opacity(100%) !important;
+}

@@ -1,6 +1,6 @@
 import '../../CSS/Player.css';
 import SideBar from './Sidebar';
-import Body from './Body';
+import PlaylistBody from './PlaylistBody';
 import Footer from './Footer';
 
 
@@ -10,7 +10,7 @@ const Player = ({ spotify }) => {
             
             <div className='playerBody'>
                 <SideBar />
-                <Body spotify={spotify}/>
+                <PlaylistBody spotify={spotify}/>
             </div>
             
             <Footer />
