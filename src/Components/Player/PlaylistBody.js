@@ -10,15 +10,15 @@ const PlaylistBody = ({ spotify }) => {
 
             <PlaylistHeader />
 
-            <div className='bodySongs'>
-
-            </div>
-
-            <div className='playlistControlIcons'>
+            <div className='playlistSongs'>
+                <div className='playlistControlIcons'>
                 <PlayCircleFilledTwoTone className='playlistPlayIcon' />
                 <Favorite className='playlistHeartIcon' />
                 <MoreHoriz className='playlistMoreIcon' />
             </div>
+            </div>
+
+            
             {/* List of songs */}
         </div>
     )

@@ -1,5 +1,5 @@
 .bodyContainer {
-    flex: 0.8;
+    flex: 1;
     height: 100vh;
     padding: 30px;
     color: white;
@@ -28,7 +28,7 @@
     /* background-color: rgb(255,255,255); */
     /* background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(30,209,94,1) 29%); */
     /* border-radius: 100px; */
-    margin: 20px 0 20px 5px;
+    margin: 20px 0 20px 25px;
     padding: 0px;
 }
 
@@ -51,4 +51,8 @@
 .playlistMoreIcon:hover {
     transition: all 100ms;
     filter: opacity(100%) !important;
+}
+
+.playlistSongs {
+    margin: 20px -30px;
 }
