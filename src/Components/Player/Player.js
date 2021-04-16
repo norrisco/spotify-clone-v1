@@ -13,7 +13,7 @@ const Player = ({ spotify }) => {
                 <PlaylistBody spotify={spotify}/>
             </div>
             
-            <Footer />
+            <Footer spotify={spotify}/>
             
         </div>
     )

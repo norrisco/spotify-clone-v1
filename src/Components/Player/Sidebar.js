@@ -5,7 +5,7 @@ import { StateProvider, useStateValue } from '../../StateProvider';
 import { Home, Search, LibraryMusic } from '@material-ui/icons';
 
 const Sidebar = () => {
-    const[{ playlists }] = useStateValue();
+    const[{ playlists }, dispatch] = useStateValue();
 
     return (
         <div className='sidebarContainer'>
@@ -21,11 +21,6 @@ const Sidebar = () => {
             {playlists?.items?.map((playlist) => (
                 <SidebarOption title={playlist.name} />
             ))}
-
-            
-            <SidebarOption title='Rock' />
-            <SidebarOption title='RnB' />
-
 
         </div>
     )

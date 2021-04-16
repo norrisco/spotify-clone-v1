@@ -19,12 +19,17 @@ const App = () => {
     window.location.hash = '';
 
     if (_token) {
+      spotify.setAccessToken(_token);
+      
       dispatch({
         type: 'SET_TOKEN',
         token: _token,
       });
 
-      spotify.setAccessToken(_token);
+      dispatch({
+        type: "SET_SPOTIFY",
+        spotify: spotify,
+      });
 
       spotify.getMe().then((user) => {
         // Pops info into StateProvider
@@ -45,11 +50,18 @@ const App = () => {
         dispatch({
           type: 'SET_DISCOVER_WEEKLY',
           discover_weekly: response,
+        });
+      });
+
+      spotify.getMyTopArtists().then((response) =>
+        dispatch({
+          type: "SET_TOP_ARTISTS",
+          top_artists: response,
         })
-      })
+      );
 
     };
-  }, []);
+  }, [token, dispatch]);
 
   return (
     <div className="App">
