@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Grid, Slider } from '@material-ui/core';
 import { PlayCircleFilled, PauseCircleFilled, SkipPrevious, SkipNext, Shuffle, Repeat, PlaylistPlay, VolumeDown } from '@material-ui/icons';
 import { useStateValue } from '../../StateProvider';
+import MusicPlayer from './MusicPlayer';
 
 const Footer = ({ spotify }) => {
     const [{ token, item, playing }, dispatch] = useStateValue();
@@ -69,7 +70,7 @@ const Footer = ({ spotify }) => {
 
     return (
         <div className='footerContainer'>
-            {/* Static Album Cover and Name */}
+            {/***** Static Album Cover and Name *****/}
             {/* <div className='footerLeft'>
                 <img
                     className='albumCover'
@@ -82,7 +83,8 @@ const Footer = ({ spotify }) => {
                 </div>
             </div> */}
 
-            <div className='footerLeft'>
+            {/***** Older Code *****/}
+            {/* <div className='footerLeft'>
                 <img
                     className='albumCover'
                     src={item?.album.images[0].url}
@@ -127,7 +129,11 @@ const Footer = ({ spotify }) => {
                         <Slider aria-labelledby='continuous-slider' />
                     </Grid>
                 </Grid>
-            </div>
+            </div>*/}
+
+            {/***** Testing this New Player *****/}
+            <MusicPlayer accessToken={token}/>
+
         </div>
     )
 }
