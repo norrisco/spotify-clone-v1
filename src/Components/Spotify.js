@@ -11,6 +11,8 @@ const scopes = [
     'streaming',
     'user-read-email',
     'user-read-private',
+    'user-library-read',
+    'user-library-modify',
 ]
 
 export const getTokenFromUrl = () => {

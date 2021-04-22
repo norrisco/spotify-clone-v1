@@ -12,10 +12,19 @@
     border-top: 0.3px solid rgb(75, 75, 75);
 }
 
-.musicPlayer{
-    width: 98%;
+.musicPlayerContainer {
+    width: 99%;
+    margin: 0 40px 0 5px;
 }
 
+/* Example override for play button */
+/* .rswp__toggle {
+    color: red !important;
+} */
+
+._SliderRSWP.__181lube {
+    margin-bottom: 7px !important;
+}
 
 /********** LEFT **********/
 .footerLeft {

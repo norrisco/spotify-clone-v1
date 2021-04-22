@@ -11,9 +11,9 @@ const MusicPlayer = ({ accessToken, trackUri }) => {
         // uris={['spotify:track:6Skh3CBum0pZw9TOr7FQnX']}
         // uris={["spotify:artist:6HQYnRM4OzToCYPpVBInuU"]}
         styles = {{
-          activeColor: '#fff',
+          activeColor: '#FF0000', //heart color
           bgColor: '#282828',
-          color: '#fff',
+          color: '#fff', //player buttons
           loaderColor: '#fff', //music player loading animation
           sliderHandleColor: '#fff',
           sliderColor: '#1cb954', //song time elapsed
