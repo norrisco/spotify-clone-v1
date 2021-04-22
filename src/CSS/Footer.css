@@ -12,6 +12,11 @@
     border-top: 0.3px solid rgb(75, 75, 75);
 }
 
+.musicPlayer{
+    width: 98%;
+}
+
+
 /********** LEFT **********/
 .footerLeft {
     min-width: 150px;
