@@ -4,12 +4,16 @@ const MusicPlayer = ({ accessToken, trackUri }) => {
   if (!accessToken) return null;
   return (
       <SpotifyPlayer
-        token={accessToken}
+        token = {accessToken}
         showSaveIcon
-        uris={trackUri ? [trackUri] : []}
-
+        name = 'Spotify – Web Player (Clone)'
+        uris = {trackUri ? [trackUri] : ['spotify:track:6Skh3CBum0pZw9TOr7FQnX']} //Temporary track uri in the last array
         // uris={['spotify:track:6Skh3CBum0pZw9TOr7FQnX']}
         // uris={["spotify:artist:6HQYnRM4OzToCYPpVBInuU"]}
+
+        // Testing these
+        persistDeviceSelection = {true}
+
         styles = {{
           activeColor: '#FF0000', //heart color
           bgColor: '#282828',

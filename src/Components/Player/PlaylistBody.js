@@ -10,7 +10,7 @@ const PlaylistBody = ({ spotify }) => {
 
     const playSong = (id) => {
         spotify
-            .play({uris: [`spotify:track:${id}`],})
+            .play({uris: [`spotify:track:${id}`]})
             .then((res) => {
                 spotify.getMyCurrentPlayingTrack().then((r) => {
                     dispatch({

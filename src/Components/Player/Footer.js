@@ -133,7 +133,10 @@ const Footer = ({ spotify }) => {
 
             {/***** Testing this New Player *****/}
             <div className='musicPlayerContainer' >
-                <MusicPlayer accessToken={token} className='musicPlayer' />
+                <MusicPlayer 
+                    accessToken={token} 
+                    className='musicPlayer' 
+                />
             </div>
             
         </div>
