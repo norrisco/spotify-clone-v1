@@ -12,7 +12,7 @@ const SongList = ({ track, playSong }) => {
 
             <div className='songListInformation' >
                 <h1>{track.name}</h1>
-                {/* <h1>{track.uri}</h1> */}
+                <h1>{track.uri}</h1>
                 <p>
                     {track.artists.map((artist) => artist.name).join(", ")} - {" "}
                     {track.album.name}

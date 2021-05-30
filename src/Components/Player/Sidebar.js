@@ -4,8 +4,35 @@ import { StateProvider, useStateValue } from '../../StateProvider';
 
 import { Home, Search, LibraryMusic } from '@material-ui/icons';
 
-const Sidebar = () => {
+const Sidebar = ({spotify}) => {
     const[{ playlists }, dispatch] = useStateValue();
+
+    const testPlaylist = (id) => 
+        spotify.getPlaylist(id).then((response) => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
+        });
+      });
+
+    const playPlaylist = (id) => {
+        spotify
+            .play({
+                context_uri: `spotify:playlist:${id}`
+            })
+            .then((res) => {
+                spotify.getMyCurrentPlayingTrack().then((r) => {
+                    dispatch({
+                        type: 'SET_ITEM',
+                        item: r.item,
+                    });
+                    dispatch({
+                        type: 'SET_PLAYING',
+                        playing: true,
+                    });
+                });
+            });
+    };
 
     return (
         <div className='sidebarContainer'>
@@ -19,7 +46,8 @@ const Sidebar = () => {
             <hr />
 
             {playlists?.items?.map((playlist) => (
-                <SidebarOption title={playlist.name} />
+                <SidebarOption title={playlist.name} uri={playlist.uri} playPlaylist={testPlaylist}/> 
+                // <SidebarOption title={playlist.name} /> 
             ))}
 
         </div>
